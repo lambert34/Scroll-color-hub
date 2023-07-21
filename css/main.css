@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw+1vh);
+    --color-header: #f4efec;
+    --color-text: #cdc6c3;
+    --gallery-gap: calc(var(--index) * 10);
+}
+
+@font-face {
+    font-family: raleway-c;
+    src: url(/Color-hub-scroll/fonts/raleway-regular.woff2);
+}
+
+@font-face {
+    font-family: outfit-c;
+    src: url(/Color-hub-scroll/fonts/outfit-regular.woff2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: outfit-c;
+}
+
+.content, .hero, .main-header, .gallery > * {
+    will-change: transform;
+}
+
+body {
+    background-image: url(/Color-hub-scroll/img/bg.jpg);
+    background-size: 50%;
+    color: #fafafa;
+    font-family: raleway-c;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: calc(var(--index) * 36);
+    position: absolute;
+    left: 64vw;
+    top: 5vw;
+    /* z-index: -1; */
+}
+
+.main-header {
+    height: 100vh;
+}
+
+.container {
+    padding: 0 7vw;
+}
+
+.main-title {
+    position: absolute;
+    font-size: calc(var(--index) * 2);
+    top: 400px;
+    width: 1200px;
+    line-height: 1;
+}
+
+
+.main-title-p {
+    position: absolute;
+    font-size: calc(var(--index) * 1);
+    top: 320px;
+    width: 700px;
+    line-height: 1;
+    color: #d8a80b;
+}
+
+.text-color {
+    color: #cf0f0f;
+}
+
+.portfolio {
+}
+
+.gallery {
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+}
+
+.gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery__left {
+    margin-top: calc(var(--gallery-gap) * 0.7);
+}
+
+.gallery__right .gallery__item {
+    margin: 0;
+    margin-top: var(--gallery-gap);
+}
+
+.gallery__item {
+    max-width: calc(var(--index) * 22);
+    margin-bottom: var(--gallery-gap);
+    max-height: 190vh;
+    border-radius: 8px;
+}
+
+.text-block {
+    color: var(--color-text);
+    position: relative;
+}
+
+.text-block__h {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--color-header);
+    margin-bottom: 1.5rem;
+}
+
+.text-block__p {
+    line-height: 1.7;
+    margin-bottom: 10vh;
+}
